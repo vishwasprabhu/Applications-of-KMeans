@@ -42,3 +42,39 @@ In this project, I will explore kmeans as a way to generate features for supervi
 
 </p>The elbow method plots the number of clusters with the within-cluster sum of square(WCSS) distance. As seen from the figure below on the left we can see the elbow where the curve changes the slope and becomes constant or flat. The value at which this happens is our optimal k value.</p> 
 
+<p float="left">
+      <img src="images/elbow.png" width="500" />
+</p>
+</p> Clearly, there is an elbow observed at k = 4 for the curve on the left since the curve almost becomes flat and changes the behavior at this point. This is one of the simplest methods to determine the optimal number of clusters. However it is not always clear which point is the elbow as seen above from the plot on the right. This happens because the separation in the clusters is not clear.
+</p>
+## 3. Application of K-Means for classification
+</p>Despite kmeans being an unsupervised problem it can still be used for classification problems. Here I will be using scikit-learns inbuilt breast cancer dataset to classify healthy patients from patients having cancer. Despite being an unsupervised algorithm it performs decently giving an accuracy score of 91.2%.</p>
+
+<p float="left">
+      <img src="images/confusion_matrix.png" width="500" />
+</p>
+## 4. Application of K-Means for grouping and finding patterns/associations
+</p>One of the use-cases of kmeans revolves around finding associations and patterns in the data by grouping certain features.
+I will be using the California housing prices data here which contains information regarding latitude, longitude, household income etc. I will try to find patterns between location data and average household price based on clusters created using location and median household income. Based on the plots below it is clear that a relationship exists between location(latitude and longitude) and median household income/median house price </p>
+<p float="left">
+      <img src="images/scatter.png" width="500" />
+</p>
+<p float="left">
+      <img src="images/violin.png" width="500" />
+</p>
+</p>Here from the above plot, it is clear that the median house value can be clustered based on income and location as we see pockets of very high median house value in clusters 1, 3 and 4 whereas clusters 0, 2 and 5 clusters have very low median house value. This gives us the underlying relation between location and median house value.</p>
+## 5. Application of K-Means to Image compression
+</p>One of the applications of kmeans is in image compression. Each pixel in an image takes a value from 0 to 255 and is of size 3 bytes (RGB). So we have about 16 million colors possible (256*256*256). However human eye cannot perceive these many colors. Hence reducing the number of colors in an image to only a handful will suffice in most cases. I will show examples below where I will reduce the colors to only 32 and produces an almost identical image.</p>
+</p>Below are my calico cats taking an afternoon nap retaining all their glorious colors even when we reduce the number of colors to 32: </p>
+<p float="left">
+      <img src="images/cats.png" width="500" />
+</p>
+</p>Applying image compression to black and white image of famous San-Francisco bridge (Credits: https://www.pinterest.com/pin/67694800618575464/) we get following result:</p>
+<p float="left">
+      <img src="images/bay_bridge.png" width="500" />
+</p>
+</p>
+Compression using kmeans is not perfect as we can see that the below image of San Francisco's ocean beach as it suffers due to the lack of colors in the high contrast regions of the image on the right. This can be fixed by better initialization techniques and choosing(tuning) the appropriate number of colors for the image. </p>
+<p float="left">
+      <img src="images/ocean_beach.png" width="500" />
+</p>
