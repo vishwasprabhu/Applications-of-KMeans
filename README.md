@@ -34,7 +34,7 @@ In this project, I will explore kmeans as a way to generate features for supervi
 </p> The k means++ algorithm improves the prediction performance and stability since the randomness of the initial points is addressed by the way of computing the next k-1 points which maximize the distance from points previously picked by the algorithm </p>
 
 ### 2.3. Elbow method to choose k
-</p>The parameter k is quite important to determine since the incorrect value will result in groupings that might not be useful. Hence we will try to determine its value using some synthetic data that has about 4 clusters. The data distribution is as follows</p> 
+</p>The parameter k is quite important to determine since the incorrect value will result in groupings that might not be useful. Hence we will try to determine its value using some synthetic data that has about 4 clusters. The data distribution is as follows:</p> 
 
 <p float="left">
       <img src="images/blob.png" width="500" />
