@@ -60,7 +60,7 @@ I will be using the California housing prices data here which contains informati
       <img src="images/scatter.png" width="500" />
 </p>
 <p float="left">
-      <img src="images/violin.png" width="500" />
+      <img src="images/violin_plot.png" width="500" />
 </p>
 </p>Here from the above plot, it is clear that the median house value can be clustered based on income and location as we see pockets of very high median house value in clusters 1, 3 and 4 whereas clusters 0, 2 and 5 clusters have very low median house value. This gives us the underlying relation between location and median house value.</p>
 ## 5. Application of K-Means to Image compression
