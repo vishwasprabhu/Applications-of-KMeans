@@ -98,6 +98,7 @@ Here I will use sklearn's built-in spectral clustering algorithm implementation 
       <img src="images/nested-spectral.png" width="500" />
 </p>
 </p>As seen above the spectral clustering does a wonderful job in separating the clusters formed by the concentric circles which our kmeans algorithm failed to perform earlier.</p>
+
 ## 7. Summary
 </p>To summarize we have discussed how kmeans algorithm works along with some limitations of kmeans and why we need kmeans++ initialization to improve the stability and performance.</p>
 </p>Further, we discussed some of the applications of kmeans in classification, grouping and finding association in data, its application in image compression. We also found a limitation in kmeans as it cannot cluster data that is highly non-convex like concentric circles.</p>
