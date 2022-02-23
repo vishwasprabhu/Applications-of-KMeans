@@ -78,3 +78,27 @@ Compression using kmeans is not perfect as we can see that the below image of Sa
 <p float="left">
       <img src="images/ocean_beach.png" width="500" />
 </p>
+
+## 6. Spectral clustering
+</p>Another limitation of kmeans algorithm is that it cannot cluster highly non-convex data like nested circles on the 2D plane. Hence we have methods like Spectral clustering which apply complex linear algebra to get clusters. </p>
+Spectral clustering makes use of eigenvalues (spectrum) of the similarity matrix of the data to perform dimensionality reduction of complex multidimensional data to cluster in fewer dimensions. It first groups data based on graphs (connectivity approach) to identify communities of data points that are in the vicinity of each other.</p>
+<p float="left">
+      <img src="images/kmeans_fail.png" width="500" />
+</p>
+We need to generate a similarity matrix. Here we will use Breiman's Random forest using random forest classifier from sklearn.
+</p> To generate a similarity matrix we need to follow these steps:</p>
+
+1. Shuffle the samples and treat them as negative samples
+2. Combine the original sample(taken as positive) and shuffled sample to train a random forest classifier. Be sure to keep high number of estimators and minimum leaf samples to get a good result.
+3. Create a matrix by counting all the pairs that appear in the same leaf from the trained model.
+4. Normalize the matrix by dividing the number of trees to get the similarity matrix.
+
+Here I will use sklearn's built-in spectral clustering algorithm implementation by passing in the computed similarity matrix.
+<p float="left">
+      <img src="images/nested-spectral.png" width="500" />
+</p>
+</p>As seen above the spectral clustering does a wonderful job in separating the clusters formed by the concentric circles which our kmeans algorithm failed to perform earlier.</p>
+## 7. Summary
+</p>To summarize we have discussed how kmeans algorithm works along with some limitations of kmeans and why we need kmeans++ initialization to improve the stability and performance.</p>
+</p>Further, we discussed some of the applications of kmeans in classification, grouping and finding association in data, its application in image compression. We also found a limitation in kmeans as it cannot cluster data that is highly non-convex like concentric circles.</p>
+</p>Finally we found a way to cluster non-convex data using spectral clustering by building a similarity matrix using Breiman's trick.</p>
