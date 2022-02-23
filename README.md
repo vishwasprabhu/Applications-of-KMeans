@@ -36,4 +36,9 @@ In this project, I will explore kmeans as a way to generate features for supervi
 ### 2.3. Elbow method to choose k
 </p>The parameter k is quite important to determine since the incorrect value will result in groupings that might not be useful. Hence we will try to determine its value using some synthetic data that has about 4 clusters. The data distribution is as follows</p> 
 
+<p float="left">
+      <img src="images/blob.png" width="500" />
+</p>
+
 </p>The elbow method plots the number of clusters with the within-cluster sum of square(WCSS) distance. As seen from the figure below on the left we can see the elbow where the curve changes the slope and becomes constant or flat. The value at which this happens is our optimal k value.</p> 
+
